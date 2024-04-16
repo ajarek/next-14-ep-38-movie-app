@@ -3,10 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
-
+import { usePathname } from 'next/navigation'
 const Links = () => {
   const [menu, setMenu] = useState(false)
- 
+  const pathname = usePathname()
   return (
     <>
       <div
@@ -45,20 +45,26 @@ const Links = () => {
           <div className='flex items-center gap-6'>
             <Link
               href='/'
-              className=' px-4'
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+                pathname === '/' ? 'active ' : 'px-4'
+              }`}
             >
              Home
             </Link>
             
             <Link
               href='/about-us'
-              className=' px-4'
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+                pathname === '/about-us' ? 'active ' : 'px-4'
+              }`}
             >
                About
             </Link>
             <Link
               href='/contact'
-              className=' px-4'
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+                pathname === '/contact' ? 'active ' : 'px-4'
+              }`}
             >
               Contact
             </Link>
@@ -69,20 +75,26 @@ const Links = () => {
           <div className='w-1/2 absolute top-0 left-0  flex flex-col pt-20 pb-2 gap-6 bg-secondary lg:hidden'>
             <Link
               href='/'
-              className=' px-4'
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+                pathname === '/' ? 'active ' : 'px-4'
+              }`}
             >
              Home
             </Link>
             
             <Link
               href='/about-us'
-              className=' px-4'
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+                pathname === '/about-us' ? 'active ' : 'px-4'
+              }`}
             >
                About
             </Link>
             <Link
               href='/contact'
-              className=' px-4'
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+                pathname === '/contact' ? 'active ' : 'px-4'
+              }`}
             >
               Contact
             </Link>
