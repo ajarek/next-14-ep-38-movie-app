@@ -12,7 +12,8 @@ const Movie = async({params}: {params: {id: string}}) => {
     `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_TMDB_KEY}`
   );
   const movie = await res.json();
- 
+  
+    
    
   return (
     <div className='flex min-h-[calc(100vh-136px)] flex-col items-center justify-center px-12 py-8 '>
@@ -24,7 +25,6 @@ const Movie = async({params}: {params: {id: string}}) => {
           width={300}
           height={400}
           priority
-          placeholder =  "empty"
           className='sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300'
         />
         </ResizablePanel>
