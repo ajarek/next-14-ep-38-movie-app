@@ -10,7 +10,7 @@ const Links = () => {
   return (
     <>
       <div
-        className='absolute left-1 top-6 lg:hidden cursor-pointer z-10'
+        className=' lg:hidden cursor-pointer z-50'
         onClick={() => setMenu(!menu)}
       >
         {menu ? (
@@ -72,7 +72,10 @@ const Links = () => {
           
         </div>
         {menu && (
-          <div className='w-1/2 absolute top-0 left-0  flex flex-col pt-20 pb-2 gap-6 bg-secondary lg:hidden'>
+          <div className='h-screen w-full  absolute left-0 top-0  flex items-center  justify-between     z-10' onClick={() => setMenu(false)}>
+
+          
+          <div className='w-1/2 absolute top-0 left-0  flex flex-col pt-20 pb-8 gap-6 bg-secondary lg:hidden z-40' onClick={() => setMenu(false)}>
             <Link
               href='/'
               className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
@@ -100,6 +103,7 @@ const Links = () => {
             </Link>
 
            
+          </div>
           </div>
         )}
       </div>

@@ -1,12 +1,14 @@
 
 import CardMovie from '@/components/CardMovie'
-import { Key, ReactElement, JSXElementConstructor, ReactNode, AwaitedReactNode } from 'react'
 const API_KEY = process.env.API_TMDB_KEY
 import type { PropsMovie } from '@/components/CardMovie'
+//trending/all/week
+//movie/top_rated
+//movie/popular
 export default async function Home() {
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`,
-    { next: { revalidate: 10000 } }
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`,
+    { next: { revalidate: 3600 } }
   )
   const data = await res.json()
   if (!res.ok) {
