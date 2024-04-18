@@ -3,6 +3,7 @@
 import connectToDb from './connectToDb'
 import { User, Course } from './models'
 import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 import bcrypt from 'bcryptjs'
 
 export const addUser = async (formData: User) => {
@@ -59,4 +60,8 @@ export const deleteCourse = async (formData: { id: string }) => {
     console.log(err)
     return { err: 'Something went wrong' }
   }
+}
+export const searchItem = async (formData: FormData) => {
+  const search = formData.get('search');
+  redirect(`/search/${search}`);
 }
