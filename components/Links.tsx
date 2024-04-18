@@ -38,14 +38,14 @@ const Links = () => {
             height={70}
             className=''
           />
-          <h1 className='font-semibold text-xl  '>Movies</h1>
+          <h1 className='font-semibold text-xl max-sm:hidden  '>Movies</h1>
         </Link>
 
         <div className='max-lg:hidden flex '>
           <div className='flex items-center gap-6'>
             <Link
               href='/'
-              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-1 transition ${
                 pathname === '/' ? 'active ' : 'px-4'
               }`}
             >
@@ -54,7 +54,7 @@ const Links = () => {
             
             <Link
               href='/about-us'
-              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-1 transition ${
                 pathname === '/about-us' ? 'active ' : 'px-4'
               }`}
             >
@@ -62,7 +62,7 @@ const Links = () => {
             </Link>
             <Link
               href='/contact'
-              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-1 transition ${
                 pathname === '/contact' ? 'active ' : 'px-4'
               }`}
             >
@@ -78,7 +78,7 @@ const Links = () => {
           <div className='w-1/2 absolute top-0 left-0  flex flex-col pt-20 pb-8 gap-6 bg-secondary lg:hidden z-40' onClick={() => setMenu(false)}>
             <Link
               href='/'
-              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-1 transition ${
                 pathname === '/' ? 'active ' : 'px-4'
               }`}
             >
