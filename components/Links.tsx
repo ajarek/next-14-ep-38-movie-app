@@ -49,16 +49,16 @@ const Links = () => {
                 pathname === '/' ? 'active ' : 'px-4'
               }`}
             >
-             Home
+              Home
             </Link>
-            
+
             <Link
               href='/about-us'
               className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-1 transition ${
                 pathname === '/about-us' ? 'active ' : 'px-4'
               }`}
             >
-               About
+              About
             </Link>
             <Link
               href='/contact'
@@ -69,41 +69,42 @@ const Links = () => {
               Contact
             </Link>
           </div>
-          
         </div>
         {menu && (
-          <div className='h-screen w-full  absolute left-0 top-0  flex items-center  justify-between     z-10' onClick={() => setMenu(false)}>
+          <div
+            className='h-screen w-full  absolute left-0 top-0  flex items-center  justify-between     z-10'
+            onClick={() => setMenu(false)}
+          >
+            <div
+              className='w-1/2 absolute top-0 left-0  flex flex-col pt-20 pb-8 gap-6 bg-secondary lg:hidden z-40'
+              onClick={() => setMenu(false)}
+            >
+              <Link
+                href='/'
+                className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-1 transition ${
+                  pathname === '/' ? 'active ' : 'px-4'
+                }`}
+              >
+                Home
+              </Link>
 
-          
-          <div className='w-1/2 absolute top-0 left-0  flex flex-col pt-20 pb-8 gap-6 bg-secondary lg:hidden z-40' onClick={() => setMenu(false)}>
-            <Link
-              href='/'
-              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-1 transition ${
-                pathname === '/' ? 'active ' : 'px-4'
-              }`}
-            >
-             Home
-            </Link>
-            
-            <Link
-              href='/about-us'
-              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
-                pathname === '/about-us' ? 'active ' : 'px-4'
-              }`}
-            >
-               About
-            </Link>
-            <Link
-              href='/contact'
-              className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
-                pathname === '/contact' ? 'active ' : 'px-4'
-              }`}
-            >
-              Contact
-            </Link>
-
-           
-          </div>
+              <Link
+                href='/about-us'
+                className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+                  pathname === '/about-us' ? 'active ' : 'px-4'
+                }`}
+              >
+                About
+              </Link>
+              <Link
+                href='/contact'
+                className={`flex items-center gap-4 hover:bg-primary hover:text-primary-foreground hover:rounded-sm  rounded-sm px-4 py-2 transition ${
+                  pathname === '/contact' ? 'active ' : 'px-4'
+                }`}
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         )}
       </div>

@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className='flex min-h-[calc(100vh-136px)] flex-col items-center justify-center px-24 py-6 gap-4'>
+    <div className='flex min-h-[calc(100vh-136px)] flex-col items-center justify-center p-12 max-sm:p-4 gap-4'>
       <h1 className='text-2xl font-medium '>About</h1>
       <p>
         Welcome to our movie database website! We are a team of passionate movie
@@ -32,5 +32,5 @@ export default function About() {
         website. Happy browsing!
       </p>
     </div>
-  );
+  )
 }

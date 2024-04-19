@@ -1,4 +1,3 @@
-import Loading from "@/app/loading";
 import {ResizableHandle,
 ResizablePanel,
 ResizablePanelGroup,

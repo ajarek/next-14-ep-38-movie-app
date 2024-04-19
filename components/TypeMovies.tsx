@@ -1,8 +1,6 @@
 import Link from 'next/link'
 
-
 const TypeMovies = () => {
-  
   return (
     <div className='flex flex-wrap gap-6 mb-4 text-xl'>
       <Link
